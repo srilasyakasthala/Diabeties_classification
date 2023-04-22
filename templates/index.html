@@ -1,0 +1,65 @@
+<html>
+  <head>
+  <title>Health Data Form</title>
+  <style>
+    
+    body{
+      background-image: url('https://www.metropolisindia.com/blog/wp-content/uploads/2020/09/diabetes_01.png');
+      background-size: cover;
+    
+      background-repeat: no-repeat;
+      
+    }
+    
+    
+    form {
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: rgba(237, 243, 239, 0.8); 
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: space-between; 
+    }
+    
+    label, input {
+      display: inline-block;
+      margin-bottom: 10px;
+      width: calc(50% - 10px);
+    }
+    
+    input:last-child {
+      margin-right: 0;
+    }
+    p{
+      text-align: center;
+      text-size-adjust: 50px;
+    }
+  </style>
+</head>
+<body >
+  <h1 style="text-align: center;">Health Data Form</h1>
+  <form action="/predict" method="post">
+    <label for="pregnancies">Pregnancies:</label>
+    <input type="number" step="any" id="pregnancies" name="pregnancies"  required>
+    <label for="glucose">glucose:</label>
+    <input type="number" step="any" id="glucose" name="glucose"  required>
+    <label for="bloodpressure">Bloodpressure:</label>
+    <input type="number" step="any" id="bloodpressure" name="bloodpressure" required>
+    <label for="skinthickness">Skin Thickness:</label>
+    <input type="number" step="any" id="skinthickness" name="skinthickness"  required>
+    <label for="insulin">Insulin:</label>
+    <input type="number" step="any" id="insulin" name="insulin"  required>
+    <label for="bmi">BMI:</label>
+    <input type="number" step="any" id="bmi" name="bmi"  required>
+    <label for="diabetespedigreefunction">Diabetes Pedigree Function:</label>
+    <input type="number" step="any" id="diabetespedigreefunction" name="diabetespedigreefunction"  required>
+    <label for="age">Age:</label>
+    <input type="number" step="any" id="age" name="age"  required>
+    <input type="submit" name="Submit" style="margin-top: 20px;margin-left: 75px;">
+    
+  </form>
+</body>
+<p>{{data}}</p>
+</html> 
